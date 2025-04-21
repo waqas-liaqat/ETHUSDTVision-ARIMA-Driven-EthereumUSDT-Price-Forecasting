@@ -20,8 +20,8 @@ def fix_path(path):
 @st.cache_resource
 def load_model():
     try:
-        model_path = fix_path("Artifacts/model_eth.pkl")
-        meta_path = fix_path("Artifacts/model_metadata.json")
+        model_path = fix_path("Artifacts\model_eth.pkl")
+        meta_path = fix_path("Artifacts\model_metadata.json")
         model = joblib.load(model_path)
         with open(meta_path) as f:
             meta = json.load(f)
@@ -36,7 +36,7 @@ model, meta = load_model()
 @st.cache_data
 def load_data():
     try:
-        data_path = fix_path("Data/eth_usdt_data.csv")
+        data_path = fix_path("Data\eth_usdt_data.csv")
         df = pd.read_csv(data_path, parse_dates=['Date'], index_col='Date')
         return df['Close']
     except Exception as e:

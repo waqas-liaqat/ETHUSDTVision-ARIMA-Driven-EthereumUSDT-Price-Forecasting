@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8285f960152cc5bda385e13a74992efc840461a65ced79f2976617a957efc4da
-size 348
+{
+    "model_type": "SARIMA",
+    "order": [
+        2,
+        1,
+        1
+    ],
+    "seasonal_order": [
+        1,
+        1,
+        1,
+        7
+    ],
+    "rmse": 1191.458690018867,
+    "mape": 0.340471004568317,
+    "aic": 24880.744820568354,
+    "last_training_date": "2025-04-17",
+    "model_file": "../Artifacts/model_eth.pkl"
+}
